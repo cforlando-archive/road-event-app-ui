@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angulr')
-    .controller('MainCtrl', function($scope) {
+    .controller('MainCtrl', function($scope, $http) {
 
       // $scope.start = null;
 
@@ -103,18 +103,17 @@ angular.module('angulr')
 
         $scope.submitEvent = function(event){
           console.log(event);
-          // $http.post('/someUrl', 
-          //   {
-          //     msg:'hello word!'
-          //   }).
-          // success(function(data, status, headers, config) {
-          //   // this callback will be called asynchronously
-          //   // when the response is available
-          // }).
-          // error(function(data, status, headers, config) {
-          //   // called asynchronously if an error occurs
-          //   // or server returns response with an error status.
-          // });
+          $http.post('/someUrl', 
+            {
+              json: $scope.event
+            }).
+          success(function(data, status, headers, config) {
+            // this callback will be called asynchronously
+            // when the response is available
+          }).
+          error(function(data, status, headers, config) {
+            console.log('not working');
+          });
         }
 
     });

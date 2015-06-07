@@ -16,8 +16,8 @@
    * Bootstrap
 
 ##Examples of how the data is currently being published:
-	*http://www.cityoforlando.net/roadclosure/
- 	*http://www.cityoforlando.net/roadclosure/wp-content/uploads/sites/57/2015/05/Road-Closure-Report-05.28.15.pdf
+   * http://www.cityoforlando.net/roadclosure/
+	* http://www.cityoforlando.net/roadclosure/wp-content/uploads/sites/57/2015/05/Road-Closure-Report-05.28.15.pdf
 
 ##Related Project 
 https://github.com/cforlando/road-event-app-api

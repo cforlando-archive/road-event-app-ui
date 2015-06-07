@@ -56,18 +56,19 @@
                 </table>
                 
                 <div class="well">
-                    <label for="exampleInputEmail1">Add Road Event</label>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Type:</label>
-                        <input type="text" class="form-control" placeholder="Type" ng-model="road.type">
-                    </div>
+                    <label for="exampleInputEmail1">Add Affected Roads</label>
+                    <p>(you must hit the 'Add' button before submitting the form)</p>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Description:</label>
-                        <input type="text" class="form-control" placeholder="Description of road" ng-model="road.description">
+                        <input type="text" class="form-control" placeholder="Robinson Street from Summerlin Avenue to Rosalind Avenue" ng-model="road.description">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Type:</label>
+                        <input type="text" class="form-control" placeholder="closure, detour, converted" ng-model="road.type">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Schedule:</label>
-                        <input type="text" class="form-control" placeholder="Schedule" ng-model="road.schedule">
+                        <input type="text" class="form-control" placeholder="from 6 p.m. Friday, June 5 and until Saturday, June 6 at 5:00 p.m." ng-model="road.schedule">
                     </div>
                     <button type="button" class="btn btn-success pull-right" ng-click="addRoad(road)">
                         <i class="fa fa-road"></i> Add</button>
@@ -75,11 +76,11 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">More info contact:</label>
-                    <input type="tel" class="form-control" placeholder="" ng-model="event.contact">
+                    <input type="tel" class="form-control" placeholder="For event information, contact 555.555.5555" ng-model="event.contact">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">More info URL:</label>
-                    <input type="tel" class="form-control" placeholder="" ng-model="event.url">
+                    <input type="tel" class="form-control" placeholder="http://www.cityoforlando.net/venues/mls-soccer-stadium/" ng-model="event.url">
                 </div>
                 <button type="button" class="btn btn-success pull-right" ng-click="submitEvent(event)"><i class="fa fa-road"></i> Submit it!</button>
             </form>

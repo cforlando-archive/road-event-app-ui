@@ -12,3 +12,11 @@
 .thumbnail img.pull-right {
   width: 50px;
 }
+
+.header-seal{
+	  height: 40px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

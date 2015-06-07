@@ -103,17 +103,25 @@ angular.module('angulr')
 
         $scope.submitEvent = function(event){
           console.log(event);
-          $http.post('/someUrl', 
-            {
-              json: $scope.event
-            }).
-          success(function(data, status, headers, config) {
+
+          var str = "string="+JSON.stringify($scope.event);
+					// Test test test
+					//var str = "string={\"title\":\"A\",\"description\":\"B\",\"life\":{\"start\":\"2015-06-03T04:00:00.000Z\",\"end\":\"2015-06-09T04:00:00.000Z\"},\"url\":\"G\",\"contact\":\"F\",\"roadEvents\":[{\"type\":\"C\",\"description\":\"D\",\"schedule\":\"FART \"}]}";
+					console.log(str);
+
+						$http({
+							method: 'POST',
+							url: 'http://localhost:3001/scottsapp',
+							data: str,
+							headers: { 'Content-Type':'application/x-www-form-urlencoded' }
+						})
+						.success(function(data, status, headers, config) {
             // this callback will be called asynchronously
             // when the response is available
-          }).
-          error(function(data, status, headers, config) {
-            console.log('not working');
-          });
+          	})
+						.error(function(data, status, headers, config) {
+           	 console.log('not working');
+          	});
         }
 
     });
